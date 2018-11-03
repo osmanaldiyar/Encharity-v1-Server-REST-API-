@@ -38,14 +38,14 @@ public class UrgentPatientController {
 
         UrgentPatient urgentPatient = urgentPatientRepository.findById(urgentPatientId).orElseThrow(()-> new ResourceNotFoundException("UrgentPatient","id",urgentPatientId));
 
-        urgentPatient.setPhotoId(urgentPatientDetails.getPhotoId());
-        urgentPatient.setFullname(urgentPatientDetails.getFullname());
-        urgentPatient.setCategory(urgentPatientDetails.getCategory());
-        urgentPatient.setDescription(urgentPatientDetails.getDescription());
-        urgentPatient.setTotalTenge(urgentPatientDetails.getTotalTenge());
-        urgentPatient.setFundedPercent(urgentPatientDetails.getFundedPercent());
-        urgentPatient.setDaysLeft(urgentPatientDetails.getDaysLeft());
-        urgentPatient.setCity(urgentPatientDetails.getCity());
+        urgentPatient.setUrgentPhotoId(urgentPatientDetails.getUrgentPhotoId());
+        urgentPatient.setUrgentFullname(urgentPatientDetails.getUrgentFullname());
+        urgentPatient.setUrgentCategory(urgentPatientDetails.getUrgentCategory());
+        urgentPatient.setUrgentDescription(urgentPatientDetails.getUrgentDescription());
+        urgentPatient.setUrgentTotalTenge(urgentPatientDetails.getUrgentTotalTenge());
+        urgentPatient.setUrgentFundedPercent(urgentPatientDetails.getUrgentFundedPercent());
+        urgentPatient.setUrgentDaysLeft(urgentPatientDetails.getUrgentDaysLeft());
+        urgentPatient.setUrgentCity(urgentPatientDetails.getUrgentCity());
 
         UrgentPatient updatedUrgentPatient = urgentPatientRepository.save(urgentPatient);
 

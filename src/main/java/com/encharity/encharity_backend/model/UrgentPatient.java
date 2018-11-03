@@ -12,93 +12,93 @@ public class UrgentPatient {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long urgentPatientId;
-    @NotBlank
-    private int photoId;
-    @NotBlank
-    private String fullname;
-    @NotBlank
-    private String category;
-    @NotBlank
-    private String description;
-    @NotBlank
-    private String totalTenge;
-    @NotBlank
-    private String fundedPercent;
-    @NotBlank
-    private String daysLeft;
-    @NotBlank
-    private String city;
+    private int urgentPatientId;
 
-    public Long getUrgentPatientId() {
+    private int urgentPhotoId;
+    @NotBlank
+    private String urgentFullname;
+    @NotBlank
+    private String urgentCategory;
+    @NotBlank
+    private String urgentDescription;
+    @NotBlank
+    private String urgentTotalTenge;
+    @NotBlank
+    private String urgentFundedPercent;
+    @NotBlank
+    private String urgentDaysLeft;
+    @NotBlank
+    private String urgentCity;
+
+    public int getUrgentPatientId() {
         return urgentPatientId;
     }
 
-    public void setUrgentPatientId(Long urgentPatientId) {
+    public void setUrgentPatientId(int urgentPatientId) {
         this.urgentPatientId = urgentPatientId;
     }
 
-    public int getPhotoId() {
-        return photoId;
+    public int getUrgentPhotoId() {
+        return urgentPhotoId;
     }
 
-    public void setPhotoId(int photoId) {
-        this.photoId = photoId;
+    public void setUrgentPhotoId(int urgentPhotoId) {
+        this.urgentPhotoId = urgentPhotoId;
     }
 
-    public String getFullname() {
-        return fullname;
+    public String getUrgentFullname() {
+        return urgentFullname;
     }
 
-    public void setFullname(String fullname) {
-        this.fullname = fullname;
+    public void setUrgentFullname(String urgentFullname) {
+        this.urgentFullname = urgentFullname;
     }
 
-    public String getCategory() {
-        return category;
+    public String getUrgentCategory() {
+        return urgentCategory;
     }
 
-    public void setCategory(String category) {
-        this.category = category;
+    public void setUrgentCategory(String urgentCategory) {
+        this.urgentCategory = urgentCategory;
     }
 
-    public String getDescription() {
-        return description;
+    public String getUrgentDescription() {
+        return urgentDescription;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setUrgentDescription(String urgentDescription) {
+        this.urgentDescription = urgentDescription;
     }
 
-    public String getTotalTenge() {
-        return totalTenge;
+    public String getUrgentTotalTenge() {
+        return urgentTotalTenge;
     }
 
-    public void setTotalTenge(String totalTenge) {
-        this.totalTenge = totalTenge;
+    public void setUrgentTotalTenge(String urgentTotalTenge) {
+        this.urgentTotalTenge = urgentTotalTenge;
     }
 
-    public String getFundedPercent() {
-        return fundedPercent;
+    public String getUrgentFundedPercent() {
+        return urgentFundedPercent;
     }
 
-    public void setFundedPercent(String fundedPercent) {
-        this.fundedPercent = fundedPercent;
+    public void setUrgentFundedPercent(String urgentFundedPercent) {
+        this.urgentFundedPercent = urgentFundedPercent;
     }
 
-    public String getDaysLeft() {
-        return daysLeft;
+    public String getUrgentDaysLeft() {
+        return urgentDaysLeft;
     }
 
-    public void setDaysLeft(String daysLeft) {
-        this.daysLeft = daysLeft;
+    public void setUrgentDaysLeft(String urgentDaysLeft) {
+        this.urgentDaysLeft = urgentDaysLeft;
     }
 
-    public String getCity() {
-        return city;
+    public String getUrgentCity() {
+        return urgentCity;
     }
 
-    public void setCity(String city) {
-        this.city = city;
+    public void setUrgentCity(String urgentCity) {
+        this.urgentCity = urgentCity;
     }
 }
