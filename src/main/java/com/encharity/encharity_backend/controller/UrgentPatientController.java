@@ -28,13 +28,13 @@ public class UrgentPatientController {
     }
 
     @GetMapping("urgentPatients/{id}")
-    public UrgentPatient getUrgentPatient(@PathVariable(value = "id") Long urgentPatientId){
+    public UrgentPatient getUrgentPatient(@PathVariable(value = "id") int urgentPatientId){
         return urgentPatientRepository.findById(urgentPatientId)
                 .orElseThrow(() -> new ResourceNotFoundException("UrgentPatient","id",urgentPatientId));
     }
 
     @PutMapping("urgentPatients/{id}")
-    public UrgentPatient updatePatient(@PathVariable(value = "id") Long urgentPatientId, @Valid @RequestBody UrgentPatient urgentPatientDetails){
+    public UrgentPatient updatePatient(@PathVariable(value = "id") int urgentPatientId, @Valid @RequestBody UrgentPatient urgentPatientDetails){
 
         UrgentPatient urgentPatient = urgentPatientRepository.findById(urgentPatientId).orElseThrow(()-> new ResourceNotFoundException("UrgentPatient","id",urgentPatientId));
 
@@ -53,7 +53,7 @@ public class UrgentPatientController {
     }
 
     @DeleteMapping("urgentPatients/{id}")
-    public ResponseEntity<?> deleteUrgentPatient(@PathVariable(value = "id") Long urgentPatientId){
+    public ResponseEntity<?> deleteUrgentPatient(@PathVariable(value = "id") int urgentPatientId){
 
         UrgentPatient urgentPatient  = urgentPatientRepository.findById(urgentPatientId).orElseThrow(()-> new ResourceNotFoundException("Patient","id",urgentPatientId));
 

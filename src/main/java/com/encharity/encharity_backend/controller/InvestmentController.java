@@ -1,6 +1,9 @@
 package com.encharity.encharity_backend.controller;
 
+import com.encharity.encharity_backend.exception.ResourceNotFoundException;
 import com.encharity.encharity_backend.model.Investment;
+import com.encharity.encharity_backend.model.Patient;
+import com.encharity.encharity_backend.model.UrgentPatient;
 import com.encharity.encharity_backend.repository.InvestmentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -20,9 +23,17 @@ public class InvestmentController {
         return investmentRepository.findAll();
     }
 
+    @GetMapping("/investment/{id}")
+    public Investment getInvestment(@PathVariable(value = "id") Long investmentId){
+        return investmentRepository.findById(investmentId)
+                .orElseThrow(() -> new ResourceNotFoundException("Investment","id",investmentId));
+    }
+
+
     @PostMapping("/addInvestment")
     public Investment addInvestment(@Valid @RequestBody Investment investment){
         return investmentRepository.save(investment);
     }
+
 
 }

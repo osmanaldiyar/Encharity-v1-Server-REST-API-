@@ -7,6 +7,7 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import java.util.Date;
+import java.util.Optional;
 
 @Entity
 @Table(name = "investments")
@@ -20,6 +21,7 @@ public class Investment {
 
     @NotBlank
     private String amountOfInvestment;
+
 
     @Column(nullable = false, updatable = false)
     @Temporal(TemporalType.TIMESTAMP)
